@@ -1,0 +1,4 @@
+install -D -m644 doc/nvidia-settings.desktop "%{buildroot}/usr/share/applications/nvidia-settings.desktop"
+install -D -m644 doc/nvidia-settings.png "%{buildroot}/usr/share/pixmaps/nvidia-settings.png"
+sed -e 's:__UTILS_PATH__:/usr/bin:' -e 's:__PIXMAP_PATH__:/usr/share/pixmaps:' -i "%{buildroot}/usr/share/applications/nvidia-settings.desktop"
+
